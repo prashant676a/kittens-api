@@ -56,6 +56,7 @@ class KittensController < ApplicationController
         @kitten = Kitten.find(params[:id])
         @kitten.destroy
 
+        redirect_to root_path, notice: "kitten deleted successfully."
     end
 
     private
