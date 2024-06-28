@@ -1,0 +1,12 @@
+<h3>Edit kitten Details</h3>
+
+<% if @kitten.errors.full_messages %>
+
+    <% @kitten.errors.full_messages.each do |error|%>
+        <%= error %>
+    <% end %>
+  
+<% end %>
+
+<%= render "form", locals: {kitten: @kitten}%>
+<br>

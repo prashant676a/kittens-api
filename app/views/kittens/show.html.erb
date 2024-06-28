@@ -1,0 +1,12 @@
+<h1>@kitten <%= @kitten.name%></h1>
+
+<span>Name: <%= @kitten.name %> </span><hr>
+<span>Age: <%= @kitten.age %> </span> <hr>
+<span>Cuteness: <%= @kitten.cuteness %> </span> <hr>
+<span>Softness: <%= @kitten.softness %> </span> <hr>
+
+<%= link_to 'Edit this kitten details', edit_kitten_path(@kitten.id) %>
+<hr>
+<%= link_to 'Delete this Kitten', kitten_path(@kitten.id), data:{"turbo-method": :delete}%>
+<hr>
+<%= link_to 'Back to Home', root_path %>

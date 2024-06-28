@@ -1,0 +1,15 @@
+<h1>All Kittens</h1>
+<hr> <br>
+
+<%@kittens.each do |kitten|%>
+    <%= link_to "KittenId:#{kitten.id}", kitten_path(kitten.id) %>
+
+    <%= kitten.name %>
+    <%= kitten.age %>
+    <%= kitten.cuteness %>
+    <%= kitten.softness %>
+
+    <br><hr>
+<% end %>
+
+<%= link_to 'Add Kitten', new_kitten_path %>

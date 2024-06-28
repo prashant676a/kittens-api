@@ -1,0 +1,27 @@
+<%= form_with(model: @kitten, local:true) do |form|%>
+    
+    <% if @kitten.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@object.errors.count, "error") %> prohibited this object from being saved:</h2>
+      <ul>
+      <% @object.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= form.label :name, "Name: "%>
+    <%= form.text_field :name%>
+
+    <%= form.label :age, "Age: "%>
+    <%= form.text_field :age%>
+
+    <%= form.label :cuteness ,"Cuteness: "%>
+    <%= form.text_field :cuteness%>
+
+    <%= form.label :softness, "Softness: "%>
+    <%= form.text_field :softness%>
+
+    <%= form.submit%>
+<% end %>
